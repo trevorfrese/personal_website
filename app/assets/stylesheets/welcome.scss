@@ -3,3 +3,23 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 @import "materialize";
+
+.padding-top-ten{
+  padding-top: 10px !important;
+}
+
+.padding-left-ten{
+  padding-left: 10px !important;
+}
+
+.padding-right-ten{
+  padding-right: 10px !important;
+}
+
+.padding-bottom-ten{
+  padding-bottom: 10px !important;
+}
+
+.black-tint{
+  background: rgba(0, 0, 0, 0.63)
+}
