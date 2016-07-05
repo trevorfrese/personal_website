@@ -1,7 +1,20 @@
 <script>
   $(document).ready(function(){
     $('.parallax').parallax();
+
+    var options = [
+      {selector: '#first-title', offset: 300, callback: function() {
+        Materialize.showStaggeredList("#first-title");
+      } },
+      {selector: '#picture-of-me', offset: 300, callback: function() {
+        Materialize.fadeInImage('#picture-of-me');
+      } }
+    ];
+    Materialize.scrollFire(options);
+
   });
+
+
 
 </script>
 <div class="parallax-container valign-wrapper black-tint">
@@ -16,15 +29,19 @@
     <%= image_tag("background.jpg")%>
   </div>
 </div>
+
 <div class="container">
-  <div class="row">
-    <div class="col push-s4 push-l4">
-      <%= image_tag("trevor.jpg", class: "circle padding-top-ten")%>
-    </div>
+  <div id="first-title">
+    <ul class="collection" style="border: 0px;">
+      <li class="collection-header opacity-zero">
+        <h3 class="center">I'm a software engineer</h3>
+      </li>
+    </ul>
   </div>
-  <div class="row center">
-    <div class="header">
-      <h2>My name is Trevor Frese</h2>
+
+  <div id="picture-of-me" class="row valign-wrapper opacity-zero">
+    <div class="col center-block">
+      <%= image_tag("trevor.jpg", class:'circle')%>
     </div>
   </div>
 </div>
