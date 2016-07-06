@@ -1,3 +1,35 @@
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript">
+  google.charts.load('current', {'packages':['geochart']});
+  google.charts.setOnLoadCallback(drawRegionsMap);
+
+  function drawRegionsMap() {
+
+    var data = google.visualization.arrayToDataTable([
+      ['Country'],
+      ['Germany'],
+      ['United States'],
+      ['Italy'],
+      ['France'],
+      ['Austria'],
+      ['Czech Republic'],
+      ['Hungary'],
+      ['Switzerland'],
+      ['China'],
+      ['Mexico'],
+      ['Greece'],
+      ['Denmark'],
+      ['Lichtenstein']
+    ]);
+
+    var options = {};
+
+    var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+
+    chart.draw(data, options);
+  }
+</script>
 <script>
   $(document).ready(function(){
     $('.carousel').carousel();
@@ -23,6 +55,11 @@
     <br>
     <h5>
       I graduated from the University of California, Santa Barbara with a major in Computer Science and a minor in German.
+    </h5>
+    <br>
+    <div id="regions_div"></div>
+    <h5>
+      I lived in Berlin, Germany for 6 months for study abroad, and I have traveled to a number of cities in Europe and China.
     </h5>
     <br>
     <h5>
