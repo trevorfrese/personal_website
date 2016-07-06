@@ -16,8 +16,19 @@
     ];
     Materialize.scrollFire(options);
 
-  });
+    $("#js-rotating").Morphext({
+      // The [in] animation type. Refer to Animate.css for a list of available animations.
+      animation: "flipInX",
+      // An array of phrases to rotate are created based on this separator. Change it if you wish to separate the phrases differently (e.g. So Simple | Very Doge | Much Wow | Such Cool).
+      separator: ",",
+      // The delay between the changing of each phrase in milliseconds.
+      speed: 2000,
+      complete: function () {
+        // Called after the entrance animation is executed.
+      }
+    });
 
+  });
 
 
 </script>
@@ -26,7 +37,11 @@
     <div class="row center">
       <h3 class="header col s12 white-text center light">My name is <span class="yellow-text">Trevor Frese.</span></h3>
       <br>
-      <h3 class="header col s12 white-text center light">I like to build things.</h3>
+      <h3 class="header col s12 white-text center light">I like to
+        <b><span id="js-rotating" >build, learn, cook, design, invent, make, improve</span></b>
+        things.</h3>
+      <!--<p class="white-text">I am a <span id="js-rotating">So Simple, Very Doge, Much Wow, Such Cool</span> Text Rotator</p>-->
+
     </div>
   </div>
   <div class="parallax">
@@ -50,22 +65,56 @@
     </div>
   </div>
 
-  <!--Promotional Section-->
   <div id="description">
     <ul class="collection" style="border: 0px;">
       <li class="collection-header opacity-zero">
-        <h4 class="center">I'm interested in learning as much as I can about anything and everything.</h4>
+        <h4 class="center">I'm interested in startups and building projects from the ground up.</h4>
       </li>
     </ul>
   </div>
 
-  <!--Carousel of pictures-->
-  <div class="carousel">
-    <a class="carousel-item"><img src="https://scontent-dfw1-1.xx.fbcdn.net/t31.0-8/10984197_10152777448133227_5000217869660902537_o.jpg"></a>
-    <a class="carousel-item"><img src="https://scontent-dfw1-1.xx.fbcdn.net/v/t1.0-9/10456077_10152307058538227_7356141925858146893_n.jpg?oh=b0867d1e8a36827e0353a1a8043829e2&oe=57E9DFC3"></a>
-    <a class="carousel-item"><img src="https://scontent-dfw1-1.xx.fbcdn.net/v/t1.0-9/12495204_10153517868143227_5372336895673166730_n.jpg?oh=2e0bd664b1f9e6b0d891858d47e00297&oe=57F87941"></a>
-    <a class="carousel-item"><img src="https://scontent-dfw1-1.xx.fbcdn.net/t31.0-8/1531975_10151995308003227_1073175194_o.jpg"></a>
-    <a class="carousel-item"><img src="https://scontent-dfw1-1.xx.fbcdn.net/t31.0-8/1264754_10151651782718227_1903467152_o.jpg"></a>
-  </div>
+  <!--<table class="centered">-->
+    <!--<thead>-->
+    <!--<tr>-->
+      <!--<th data-field="id">Name</th>-->
+      <!--<th data-field="name">Item Name</th>-->
+      <!--<th data-field="price">Item Price</th>-->
+    <!--</tr>-->
+    <!--</thead>-->
 
+    <!--<tbody>-->
+    <!--<tr>-->
+      <!--<td>Alvin</td>-->
+      <!--<td>Eclair</td>-->
+      <!--<td>$0.87</td>-->
+    <!--</tr>-->
+    <!--<tr>-->
+      <!--<td>Alan</td>-->
+      <!--<td>Jellybean</td>-->
+      <!--<td>$3.76</td>-->
+    <!--</tr>-->
+    <!--<tr>-->
+      <!--<td>Jonathan</td>-->
+      <!--<td>Lollipop</td>-->
+      <!--<td>$7.00</td>-->
+    <!--</tr>-->
+    <!--</tbody>-->
+  <!--</table>-->
+</div>
+
+<div class="parallax-container valign-wrapper black-tint">
+  <div class="container">
+    <div class="row center">
+      <h4 class="header col s12 white-text center light">
+        With my 2 co-founders, I created <a href="http://www.sbhacks.com/" target="_blank">SB Hacks</a>
+      </h4>
+      <br>
+      <h5>
+        SB Hacks is the first intercollegiate hackathon at UCSB
+      </h5>
+    </div>
+  </div>
+  <div class="parallax">
+    <%= image_tag("sbhacks.jpg")%>
+  </div>
 </div>

@@ -30,6 +30,7 @@ gem 'material_icons'
 gem 'simple_form'
 gem 'letter_opener', :group => :development
 
+gem 'animate-rails'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
