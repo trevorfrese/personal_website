@@ -27,6 +27,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'materialize-sass'
 gem 'material_icons'
 
+gem 'simple_form'
+gem 'letter_opener', :group => :development
+
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
