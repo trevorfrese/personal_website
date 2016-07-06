@@ -5,8 +5,12 @@
       <li>
         <%= link_to("HOME", root_path) %>
       </li>
-      <li><a href="badges.html">PROJECTS</a></li>
-      <li><a href="collapsible.html">FOOD</a></li>
+      <!--<li>-->
+        <!--<%= link_to("PROJECTS", '/projects') %>-->
+      <!--</li>-->
+      <li>
+        <%= link_to("FOOD", '/food') %>
+      </li>
     </ul>
 
     <%= link_to("TREVOR FRESE", root_path, class: "brand-logo center padding-left-ten") %>
@@ -14,10 +18,10 @@
     <!--Right hand side-->
     <ul class="right hide-on-med-and-down">
       <li>
-        <%= link_to("ABOUT", welcome_about_path) %>
+        <%= link_to("ABOUT", '/about') %>
       </li>
       <li>
-        <%= link_to("CONTACT", welcome_contact_path) %>
+        <%= link_to("CONTACT", '/contact') %>
       </li>
     </ul>
 </nav>
