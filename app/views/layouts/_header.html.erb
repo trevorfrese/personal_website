@@ -1,6 +1,17 @@
 <script>
   $(document).ready(function() {
-    $('#navbar').pushpin({ top: 500 });
+
+    if($(window).width() > 900){
+      $('#navbar').pushpin({ top: 500 });
+    }
+
+    $('.button-collapse').sideNav({
+          menuWidth: 240, // Default is 240
+          edge: 'left', // Choose the horizontal origin
+          closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
+        }
+    );
+
 
   });
 </script>
@@ -30,4 +41,26 @@
         <%= link_to("CONTACT", '/contact') %>
       </li>
     </ul>
+
+    <ul id="slide-out" class="side-nav orange">
+      <li>
+        <%= link_to("HOME", root_path) %>
+      </li>
+      <li>
+        <%= link_to("WORK", '/projects') %>
+      </li>
+      <li>
+        <%= link_to("FOOD", '/food') %>
+      </li>
+      <li>
+        <%= link_to("ABOUT", '/about') %>
+      </li>
+      <li>
+        <%= link_to("CONTACT", '/contact') %>
+      </li>
+    </ul>
+
+    <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+
+
 </nav>
