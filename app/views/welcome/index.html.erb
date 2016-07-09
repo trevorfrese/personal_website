@@ -3,6 +3,8 @@
     $('.parallax').parallax();
     $('.carousel').carousel();
 
+
+
     var options = [
       {selector: '#first-title', offset: 300, callback: function() {
         Materialize.showStaggeredList("#first-title");
@@ -49,7 +51,7 @@
   </div>
 </div>
 
-<div class="container">
+<div class="container padding-bottom-20">
   <!--Introduction Section-->
   <div id="first-title">
     <ul class="collection" style="border: 0px;">
@@ -77,8 +79,7 @@
 
 <div class="divider"></div>
 
-<div class="container">
-  <br>
+<div class="container padding-bottom-20">
 
   <div>
     <h4 class="center">Here are the languages I speak:</h4>
@@ -88,7 +89,7 @@
 </div>
 
 <div class="section red">
-  <div class="container">
+  <div class="container padding-bottom-20">
     <div class="section-title">
       <h3 class="center white-text">
         Work
@@ -97,15 +98,18 @@
     <div class="section-bar">
 
     </div>
-    <h5 class="white-text">
-      I am currently seeking new opportunities! <%= link_to("Here's examples of my previous work.", '/projects')%>
+    <h5 class="white-text center">
+      I work as a software engineer and am interested in consulting opportunities.
     </h5>
-    <h5 class="white-text"> If you need a software engineer or have an
-      interesting startup idea, please <%= link_to("get in touch with me.", welcome_contact_path)%>
-    </h5>
+    <div class="center">
+      <%= link_to("See my past work", '/projects', class:'waves-effect waves-light yellow darken-3 btn-large')%>
+    </div>
   </div>
 </div>
 
-<div>
-  <h2 class="center">Hire me!</h2>
+<div class="container padding-bottom-20">
+  <h3 class="center">Get in touch</h3>
+  <h5 class="center"> If you need a software engineer or have an
+    interesting startup idea, please <%= link_to("get in touch with me.", welcome_contact_path)%>
+  </h5>
 </div>
