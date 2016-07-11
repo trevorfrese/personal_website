@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'blog/index'
+
   get 'food/index'
 
   get 'projects/index'
@@ -12,10 +14,11 @@ Rails.application.routes.draw do
 
   get '/about' => 'welcome#about'
   get '/contact' => 'welcome#contact'
-  get 'projects' => 'projects#index'
-
+  get '/projects' => 'projects#index'
   get '/food' => 'food#index'
+  get '/blog' => 'blog#index'
   resources :welcome
+  resources :posts
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

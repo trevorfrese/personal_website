@@ -1,0 +1,27 @@
+<div class="section">
+  <div class="container">
+    <div class="section-title">
+      <h3 class="center">My Blog</h3>
+    </div>
+
+
+    <div class="row center">
+      <div class="col s12">
+        <% @posts.each do |post| %>
+            <h4 class=""><%= post.title %></h4>
+            <%= markdown(post.body) %>
+            <%= link_to 'Full Post', post, class: "btn btn-large" %>
+
+            <!--<td><%= link_to 'Edit', edit_post_path(post) %></td>-->
+            <!--<td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
+
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<br>
+
+<!--<%= link_to 'New Post', new_post_path %>-->
